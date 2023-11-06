@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="YYYY-MM-DD hh:mm">
+ <shop>
+  <name>Yandex Market</name>
+  <company>Yandex</company>
+  <url>https://market.yandex.ru/</url>
+  <currencies>
+   <currency id="RUB" rate="1"/>
+  </currencies>
+  <categories>
+   <category id="90401">Все товары</category>
+   <category id="198118" parentId="90401">Бытовая техника</category>
+   <category id="198119" parentId="90401">Электроника</category>
+  </categories>
+  <offers>
+   <offer id="6508987" available="true">
+    <name>Часы наручные CASIO MTP-1308L-1A</name>
+    <categoryId>91259</categoryId>
+    <picture>https://avatars.mds.yandex.net/get-mpic/200316/img_id4632133598649289442/9</picture>
+    <price>3120</price>
+    <currencyId>RUB</currencyId>
+    <url>https://market.yandex.ru/product--chasy-naruchnye-casio-mtp-1308l-1a/6508987?distr_type=7&amp;mclid=1002&amp;pp=940&amp;sku=6508987</url>
+    <group_id>6508987</group_id>
+    <vendor>CASIO</vendor>
+    <oldprice>3980</oldprice>
+    <description>Стильные часы Casio произведены из нержавеющей стали и минерального стекла, устойчивого к царапинам.&lt;br /&gt;Корпус часов выполнен из нержавеющей стали. Часы имеют степень влагозащиты Water Resist 50 m ( 5 bar) и выдерживают плавание (без ныряния). Ремешок часов выполнен из натуральной кожи&lt;br /&gt;Наручные часы CASIO&lt;br /&gt;Оригинальные часы CASIO</description>
+    <barcode>2008252547371</barcode>
+    <barcode>4971850070481</barcode>
+    <param name="Цвет">черный</param>
+    <param name="Пол">male</param>
+    <param name="Материал">кожа</param>
+    <count>6</count>
+   </offer>
+  </offers>
+ </shop>
+</yml_catalog>

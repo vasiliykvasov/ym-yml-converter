@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создания фида OZON из прайс-листа Яндекс Маркета</title>
+</head>
+<body>
+    <style>form label {
+        display: block;
+    }
+    </style>
+    <h1>Создание фида из прайс-листа Яндекс Маркета</h1>
+    <form id="feed_form" action="web.php" method="get">
+        <label id="feed_type_label">Тип фида <select id="feed_type_select" name="feed_type">
+            <option value="megamarket">Мегамаркет</option>
+            <option value="ozon" selected>Ozon</option>
+        </select></label>
+        <label id="file_feed_label">Ссылка на фид <input id="file_feed_input" type="text" name="file_feed" required></label>
+        <label id="option_prices_label">Обновлять цены <input id="option_prices_input" type="checkbox" name="option_prices"></label>
+        <label id="option_outlets_label">Обновлять остатки <input id="option_outlets_input" type="checkbox" name="option_outlets" onclick="warehouseId()"></label>
+        <label id="warehouse_id_label" style="display:none;">Идентификатор склада <input id="warehouse_id_input" type="text" name="warehouse_id"></label>
+        <label id="option_debug_label">Открыть фид <input id="option_debug_input" type="checkbox" name="option_view"></label>
+        <label id="save_name_label">Название файла <input id="save_name_input" type="text" name="save_name"></label>
+        <label><input type="submit" name="send" value="Отправить"></label>
+    </form>
+    <script>
+        function warehouseId() {
+            let formFeedForm = document.querySelector("#feed_form");
+            let labelOptionOutlets = formFeedForm.querySelector("#option_outlets_label");
+            let inputOptionOutlets = formFeedForm.querySelector("#option_outlets_input");
+            let labelWarehouseId = formFeedForm.querySelector("#warehouse_id_label");
+            let inputWarehouseId = formFeedForm.querySelector("#warehouse_id_input");
+            if (inputOptionOutlets.checked) {
+                labelWarehouseId.style.display = "";
+                inputWarehouseId.style.display = "";
+                inputWarehouseId.setAttribute("required",true);
+            } else {
+                labelWarehouseId.style.display = "none";
+                inputWarehouseId.style.display = "none";
+                inputWarehouseId.setAttribute("required",false);
+            }
+        }
+
+    </script>
+</body>
+</html>
