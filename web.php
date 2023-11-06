@@ -35,5 +35,9 @@ if (isset($_GET['file_feed']) && (!empty($_GET['file_feed']))) { // Если у�
     } else { // Иначе
         $option_savename = $_GET['save_name'] . '.xml'; // Название файла будет, как указано при сохранении
     }
-    convert_yml($_GET['feed_type'], $option_save, $_GET['file_feed'], $option_prices, $option_outlets, $warehouse_id, $option_savename); // Запустить функцию обновления
+    if (fopen($_GET['file_feed'], "r")) {
+        convert_yml($_GET['feed_type'], $option_save, $_GET['file_feed'], $option_prices, $option_outlets, $warehouse_id, $option_savename); // Запустить функцию обновления
+    } else {
+        echo('Неверная ссылка на фид!');
+    }
 }
